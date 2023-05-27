@@ -11,7 +11,7 @@ export default function Form() {
   const [email, setEmail] = useState('');
   const [pwd, setPwd] = useState('');
 
-  console.log(auth?.currentUser?.email);
+  console.log(auth.currentUser);
 
   const signIn = async () => {
     try {
@@ -61,6 +61,7 @@ export default function Form() {
       <button onClick={signInWithGoogle}>SIGN IN WITH GOOGLE</button>
       <br /> <br />
       <button onClick={logout}>Log out</button>
+      <img src={auth?.currentUser?.photoURL} />
     </div>
   );
 }
