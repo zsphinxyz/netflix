@@ -2,8 +2,8 @@ import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 
 const firebaseConfig = {
-  // apiKey: 'AIzaSyBqktb-1FnS38Yxh5wnm10jUl8ys3vREPQ',
-  apiKey: process.env.REACT_APP_APIKEY,
+  // apiKey: process.env.REACT_APP_APIKEY,
+  apiKey: 'AIzaSyBqktb-1FnS38Yxh5wnm10jUl8ys3vREPQ',
   authDomain: 'zreact.firebaseapp.com',
   projectId: 'zreact',
   storageBucket: 'zreact.appspot.com',
