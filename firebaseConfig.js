@@ -12,5 +12,7 @@ const firebaseConfig = {
 };
 
 export const app = initializeApp(firebaseConfig);
+const key = process.env.REACT_APP_APIKEY;
+console.log(key);
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
