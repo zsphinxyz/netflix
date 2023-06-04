@@ -7,6 +7,10 @@ import {
   signOut,
 } from 'firebase/auth';
 
+import { FcGoogle } from 'react-icons/fc';
+import { AiOutlineMail } from 'react-icons/ai';
+import { RiLockPasswordLine } from 'react-icons/ri';
+
 export default function Form() {
   const [email, setEmail] = useState('');
   const [pwd, setPwd] = useState('');
@@ -47,6 +51,7 @@ export default function Form() {
           setEmail(e.target.value);
         }}
       />
+      <AiOutlineMail />
       <br /> <br />
       <input
         type="password"
@@ -55,10 +60,13 @@ export default function Form() {
           setPwd(e.target.value);
         }}
       />
+      <RiLockPasswordLine />
       <br /> <br />
       <button onClick={signIn}>Sign In</button>
       <br /> <br />
-      <button onClick={signInWithGoogle}>SIGN IN WITH GOOGLE</button>
+      <button onClick={signInWithGoogle}>
+        <FcGoogle /> SIGN IN WITH GOOGLE
+      </button>
       <br /> <br />
       <button onClick={logout}>Log out</button>
       <img src={auth?.currentUser?.photoURL} />
